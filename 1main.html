@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+    .container{
+        width: 100%;
+        margin-bottom: 8px;
+        overflow: hidden;
+    }
+    div.logo{
+        width:70%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color:dimgrey;
+        margin: 0 auto;
+        outline: 1px solid;
+    }
+    hr{
+        background: black;
+        height: 1px;
+        border: 0;
+    }
+    ul.gnb{
+        background-color: cornsilk;
+        padding: 8px 0px;
+        outline: 1px solid;
+        width: 240px;
+        height: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        text-decoration-line: none;
+    }
+    ul.gnb > li{
+        text-align: center;
+        list-style-type: none;
+        float: left;
+        padding-left: 16px;
+    }
+    ul.gnb > li > a {
+        text-decoration-line: none;
+        color: black;
+    }
+    div.haksik{
+        border: 1px solid;
+        background-color:rgba(241, 240, 245);;
+        width: 85%;
+        margin: 10px auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    div.umai{
+        background-color: rgba(241, 240, 245);
+        margin: 10px auto;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-image: url(imgs/tanoshi2.png);
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    div.pyo > table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+    div.pyo > table {
+        width: 80%;
+    }
+    div.more{
+        padding-top:10px;
+        list-style-type: none;
+    }
+    div.more > a {
+        text-decoration-line: none;
+        color: gray;
+    }
+    div.restaurant{
+        background-color: rgba(241, 240, 245);
+        border: 1px solid;
+        width: 85%;
+        margin: 10px auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    div.recommend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-width: 450px;
+        column-gap: 15px;
+        margin: 0 auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    div.recommend figure{
+        display: inline-block;
+        border: 1px solid;
+        margin: 0 auto;
+        margin: 5px;
+        padding: 1px;
+        box-shadow: 1px 1px 2px;
+    }
+    div.recommend > figure > a{
+        text-decoration: none;
+        color: black;
+    }
+    div.recommend > figure:last-child{
+        border:none;
+        box-shadow:none;
+        width: 120px;
+        height: 85px;
+        line-height: 80px;
+        vertical-align: top;
+    }
+    div.recommend >figure:last-child > a{
+        color: gray;
+    }
+    div.timetable {
+        margin: 0 auto;
+        width: 85%;
+    }
+    div.timetable > table {
+        background-color: rgba(241, 240, 245);
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 1px solid;
+    }
+    div.timetable a{
+        text-decoration-line: none;
+        color: gray;
+    }
+    th, td{
+        width: 10%;
+    }
+    #today{
+        line-height: 5px;
+    }
+    div.dormitory{
+        border: 1px solid;
+        background-color:rgba(241, 240, 245);
+        width: 85%;
+        margin: 10px auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    div.dormimage{
+        margin: 10px auto;
+        width: 70%;
+        box-shadow: 1px 1px 2px;
+        border: 1px solid;
+        background-color: rgba(229, 229, 229);
+    }
+    div.gotodorm > a{
+        text-decoration-line: none;
+        color: gray;
+    }
+</style>
+<body>
+    <div>
+        <div class="logo">
+            <h1 class="container">정수폴에서 살아남기</h1>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="gnb">
+            <li><a href="2haksik.html">학식</a></li>
+            <li><a href="3restaurant.html">맛집</a></li>
+            <li><a href="4timetable.html">시간표</a></li>
+            <li><a href="5dormitory.html">생활관</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="haksik">
+            <div class="umai">
+                <h3>오늘의 학식</h3>
+            </div>
+            <div class="pyo">
+                <table>
+                    <tr align="center">
+                      <th colspan="3">2023-04-17 월요일</th>
+                    </tr>
+                    <tr align="center">
+                        <th>조식</th>
+                        <th>중식</th>
+                        <th>석식</th>
+                    </tr>
+                    <tr align="center">
+                        <td>쌀밥 , 다시마무국 , 닭살데리야끼볶음 , 시금치나물무침 , 무말랭이무침 , 김치</td>
+                        <td>쌀밥 , 감자된장국 , 미나리돈육볶음 , 닭가슴살샐러드 , 도시락김 , 김치</td>
+                        <td>쌀밥 , 계란무우국 , 제육떡조림 , 표고브로콜리볶음 , 숙주나물 , 김치</td>
+                    </tr>
+                </table>
+                <div class="more">
+                    <a href="2haksik.html">더보기...</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="restaurant">
+            <h3>우리 학교 근처의 음식점</h3>
+            <div class="recommend">
+                <figure>
+                    <a href="https://www.google.com/maps/place/%EB%B2%A0%EC%93%B0+%ED%91%B8%ED%8B%B4/data=!4m6!3m5!1s0x357ca3cad26f35f5:0xcf76a7918b94cbc6!8m2!3d37.529787!4d126.9973975!16s%2Fg%2F11cs36wkkc">
+                        <img src="imgs/bathpoutine.jfif" alt="bathpoutine" width="120px" height="60px">
+                    <figcaption>배쓰푸틴</figcaption></a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps?q=%EC%9D%B4%ED%83%9C%EC%9B%90+%EC%BC%80%EB%A5%B4%EB%B0%98&sxsrf=APwXEdd0PwtdEjXF3gOm065hOgPQZt3L8Q:1682231579652&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzILCC4QgAQQxwEQrwEyCwguEIAEEMcBEK8BMgQIABAeMgYIABAIEB4yAggmMhYILhCABBDHARCvARDcBBDeBBDgBBgBOgcIIxDqAhAnOgQIIxAnOhEILhCABBCxAxCDARDHARDRAzoLCAAQgAQQsQMQgwE6BAgAEAM6DgguEMcBELEDENEDEIAEOgUIABCABDoLCC4QgAQQsQMQgwE6DgguEIAEELEDEIMBENQCOggIABCABBCxAzoICC4QgAQQsQM6DQguEIoFEMcBEK8BEEM6GAguEIoFEMcBEK8BEEMQ3AQQ3gQQ4AQYAToECC4QA0oECEEYAFAAWI8gYO8gaANwAXgAgAGOAYgB9g2SAQM4LjmYAQCgAQGwAQrAAQHaAQYIARABGBQ&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjQ-572s7_-AhUzs1YBHfULBHUQ_AUoAnoECAEQBA">
+                        <img src="imgs/kervan.jfif" alt="kervan" width="120px" height="60px">
+                        <figcaption>케르반</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps/place/%ED%95%98%EC%8B%9C%EC%97%94%EB%8B%A4/data=!3m1!4b1!4m6!3m5!1s0x357ca24a69373697:0x777e5a309cd4ff0c!8m2!3d37.5340034!4d126.9934906!16s%2Fg%2F11c1smhg37">
+                        <img src="imgs/hacienda.jpg" alt="hacienda" width="120px" height="60px">
+                        <figcaption>하시엔다</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps?q=%EC%9D%B4%ED%83%9C%EC%9B%90+%EC%96%B4%EC%A0%9C%EC%9D%98%EC%B9%B4%EB%A0%88&sxsrf=APwXEddRiPeQPKaTv3Wp0lUnWYT1NDiA4Q:1682233249548&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAEyBQghEKABMgUIIRCgATIFCCEQoAE6CggAEEcQ1gQQsAM6BAgjECc6DQguEIoFEMcBEK8BEEM6CwgAEIAEELEDEIMBOggIABCABBCxAzoHCAAQigUQQzoFCAAQgAQ6BAgAEAM6GAguEIoFEMcBEK8BEEMQ3AQQ3gQQ4AQYAToLCC4QgAQQxwEQrwFKBAhBGABQ-gJY3wtg-AxoAXABeACAAXiIAcMJkgEDNi42mAEAoAEByAEFwAEB2gEGCAEQARgU&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiOurf_t7_-AhUgt1YBHYzSBfEQ_AUoA3oECAEQBQ">
+                        <img src="imgs/yesterdaycurry.png" alt="yesterdaycurry" width="120px" height="60px">
+                        <figcaption>어제의카레</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps/place/%EB%82%98%EB%AC%B4%EC%95%84%EB%9E%98/data=!4m16!1m9!3m8!1s0x357ca2354c352b5d:0xf41ea61150b47700!2z64KY66y07JWE656Y!8m2!3d37.5311733!4d126.9968221!9m1!1b1!16s%2Fg%2F11clv7tjjs!3m5!1s0x357ca2354c352b5d:0xf41ea61150b47700!8m2!3d37.5311733!4d126.9968221!16s%2Fg%2F11clv7tjjs">
+                        <img src="imgs/undertree.jpg" alt="undertree" width="120px" height="60px">
+                        <figcaption>나무아래</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps/place/%EC%9A%94%EC%BD%94%EC%8A%A4%EC%B9%B4%EC%93%B0%EB%82%98%EB%AF%B8/data=!3m1!4b1!4m6!3m5!1s0x357ca331d04ea417:0xa0009830cdeff652!8m2!3d37.5304683!4d126.997839!16s%2Fg%2F11hz2l_kg_">
+                        <img src="imgs/yokosuka.jpg" alt="yokosukatsunami" width="120px" height="60px">
+                        <figcaption>요코스카쓰나미</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps/place/%ED%95%9C%EB%8F%84%EB%8B%88/data=!4m15!1m8!3m7!1s0x357ca24a9a24a547:0x2604ad2327142874!2z7ZWc64-E64uI!8m2!3d37.5329076!4d126.995551!10e1!16s%2Fg%2F1q5bvq9w6!3m5!1s0x357ca24a9a24a547:0x2604ad2327142874!8m2!3d37.5329076!4d126.995551!16s%2Fg%2F1q5bvq9w6">
+                        <img src="imgs/handoni.jpg" alt="handoni" width="120px" height="60px">
+                        <figcaption>한도니</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps/place/APT+SEOUL/data=!3m1!4b1!4m6!3m5!1s0x357ca23576a465eb:0x72828005d3756c21!8m2!3d37.5318362!4d126.9946742!16s%2Fg%2F11c5bm7bvb">
+                        <img src="imgs/aptseoul.jpg" alt="aptseoul" width="120px" height="60px">
+                        <figcaption>apt서울</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com/maps/place/%EC%9D%B4%ED%83%9C%EC%9B%90+%EC%88%A0%EC%A7%91+sector118+%7C+Itaewon+Bar/data=!3m1!4b1!4m6!3m5!1s0x357ca336844393db:0xd4288d57a2c487bd!8m2!3d37.5332558!4d126.9944641!16s%2Fg%2F11h7fnl6xp">
+                        <img src="imgs/sector118.jpg" alt="sector118" width="120px" height="60px">
+                        <figcaption>섹터118</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="3restaurant.html">더보기...</a>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="timetable">
+            <table>
+                <tr align="center">
+                    <td colspan="9" id="today"><h3>오늘의 시간표 (月)</h3></td>
+                </tr>
+                <tr align="center">
+                    <th>1교시</th>
+                    <th>2교시</th>
+                    <th>3교시</th>
+                    <th>4교시</th>
+                    <th>5교시</th>
+                    <th>6교시</th>
+                    <th>7교시</th>
+                    <th>8교시</th>
+                    <th>9교시</th>
+                </tr>
+                <tr align="center">
+                    <td colspan="3">웹프로그래밍기초</td>
+                    <td></td>
+                    <td colspan="3">융합UI실습</td>
+                    <td colspan="2">컴퓨터활용프리젠테이션</td>
+                </tr>
+                <tr align="center">
+                    <td colspan="9"><a href="4timetable.html">전체 시간표 보기...</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="dormitory">
+            <h3>생활관</h3>
+            <div class="dormimage">
+                <img src="imgs/dorm2.png" alt="dorm" width="60%">
+            </div>
+            <div class="gotodorm"><a href="5dormitory.html">생활관 정보 보기...</a></div>
+        </div>
+    </div>
+</body>
+</html>
