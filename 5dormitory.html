@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>생활관</title>
+    <script>
+        function confirmNavigation() {
+          var confirmationMessage = "외부 페이지로 이동됩니다. 계속하시겠습니까?";
+          alert(confirmationMessage);
+          return true;
+        }
+      </script>
 </head>
 <style>
     body{
@@ -85,7 +92,7 @@
     </div>
     <div class="container">
         <div class="more">
-            <a href="https://www.kopo.ac.kr/jungsu/content.do?menu=245">생활관 정보 더보기...</a>
+            <a href="https://www.kopo.ac.kr/jungsu/content.do?menu=245" onclick="confirmNavigation();">생활관 정보 더보기...</a>
         </div>
     </div>
 </body>

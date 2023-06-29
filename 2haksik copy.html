@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학식</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script>
+        function confirmNavigation() {
+          var confirmationMessage = "외부 페이지로 이동됩니다. 계속하시겠습니까?";
+          alert(confirmationMessage);
+          return true;
+        }
+      </script>
 </head>
 <style>
     body {
@@ -157,7 +163,7 @@
         </div>
     </div>
     <div class="gotohaksik">
-        <a href="https://www.kopo.ac.kr/jungsu/content.do?menu=247">식단정보 바로가기...</a>
+        <a href="https://www.kopo.ac.kr/jungsu/content.do?menu=247" onclick="confirmNavigation();">식단정보 바로가기...</a>
     </div>
 </body>
 </html>
