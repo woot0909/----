@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학식</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<style>
+    body {
+        background-color: antiquewhite;
+    }
+    div.container{
+        width: 100%;
+        overflow: hidden;
+    }
+    div.logo{
+        width:70%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color:dimgrey;
+        margin: 0 auto;
+        outline: 1px solid;
+        margin-bottom: 10px;
+    }
+    div.date{
+        width: 50%;
+        height: 30px;
+        text-align: center;
+        background-color:rgba(241, 240, 245);
+        margin: 0 auto;
+        border: 1px solid;
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    div.haksik {
+        margin: 0 auto;
+        width: 90%;
+        background-color:rgba(241, 240, 245);;
+    }
+    div.haksik > table {
+        border-collapse: collapse;
+    }
+    th:first-child, td:first-child{
+        width: 15%;
+    }
+    td{
+        border: 1px solid;
+        width: 25%;
+        height: 100px;
+    }
+    th{
+        border: 1px solid;
+        width: 25%;
+    }
+    div.gotohaksik{
+        width: 90%;
+        background-color: rgba(241, 240, 245);
+        border: 1px solid;
+        margin: 10px auto;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+    }
+    div.gotohaksik > a{
+        text-decoration-line: none;
+        color: gray;
+    }
+    div.mealbutton {
+        border: 1px solid;
+        padding-left: 8px;
+        padding-bottom: 3px;
+        margin: 0 auto;
+        margin-top: 4px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1 class="container">이번 주 학식</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="date">2023-06-26 ~ 2023-06-30</div>
+    </div>
+    <div class="container">
+        <div class="haksik">
+            <table id="mealTable">
+                <thead>
+                  <tr>
+                    <th>일자</th>
+                    <th>아침</th>
+                    <th>점심</th>
+                    <th>저녁</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="mealbutton">
+                <input type="text" id="dateInput" placeholder="일자">
+                <input type="text" id="breakfastInput" placeholder="아침">
+                <input type="text" id="lunchInput" placeholder="점심">
+                <input type="text" id="dinnerInput" placeholder="저녁">
+                <button id="addMealButton">식단 추가</button>
+            </div>
+            <script>
+                $(document).ready(function() {
+                  var meals = [
+                    { date: '2023-06-26', breakfast: '쌀밥 , 떡만두국 , 치킨탕수육 , 청경채겉절이 , 오복지무침 , 김치', lunch: '쌀밥 , 얼큰어묵국 , 등심돈까스 , 그린샐러드 , 오렌지 , 김치', dinner: '쌀밥 , 짜글이부대찌개 , 너비아니 , 계란찜 , 참나물무침 , 김치' },
+                    { date: '2023-06-27', breakfast: '쌀밥 , 유부우동 , 비엔나볶음 , 계란후라이 , 요플레 , 김치', lunch: '쌀밥 , 아욱국 , 닭도리탕 , 미역줄기볶음 , 비름나물무침 , 김치', dinner: '짜장면 , 찹쌀탕수육&소스 , 짜사이무침 , 야쿠르트 , 김치' },
+                    { date: '2023-06-28', breakfast: '쌀밥 , 시금치국 , 미니돈까스 , 감자튀김 , 깻잎지 , 김치	', lunch: '쌀밥 , 닭개장 , 탕수육 , 열무된장무침 , 김구이 , 김치', dinner: '쌀밥 , 콩나물김치국 , 파인애플함박스테이크 , 스크램블에그 , 해초샐러드 , 김치' },
+                    { date: '2023-06-29', breakfast: '쌀밥 , 애호박된장국 , 떡갈비구이 , 스마일감자 , 우유 , 김치', lunch: '다시마무채국 , 계란햄볶음밥 , 미니돈까스 , 브로콜리&초장 , 요플레(블루베리) , 김치', dinner: '쌀밥 , 근대국 , 제육김치볶음 , 감자샐러드빵 , 맛탕 , 김치' },
+                    { date: '2023-06-30', breakfast: '쌀밥 , 두부된장국 , 치킨너겟&머스타드 , 스크램블에그 , 요쿠르트', lunch: '쌀밥 , 쇠고기미역국 , 너비아니구이 , 청경채굴소스볶음 , 숙주나물 , 김치', dinner: '쌀밥 , 유부국 , 멘치까스 , 김치파전 , 도시락김 , 김치' },
+                  ];
+            
+                  var tableBody = $('#mealTable tbody');
+            
+                  for (var i = 0; i < meals.length; i++) {
+                    var row = $('<tr>');
+                    row.append($('<td>').text(meals[i].date));
+                    row.append($('<td>').text(meals[i].breakfast));
+                    row.append($('<td>').text(meals[i].lunch));
+                    row.append($('<td>').text(meals[i].dinner));
+                    tableBody.append(row);
+                  }
+                });
+              </script>
+    <script>
+    $(document).ready(function() {
+      $('#addMealButton').click(function() {
+        var date = $('#dateInput').val();
+        var breakfast = $('#breakfastInput').val();
+        var lunch = $('#lunchInput').val();
+        var dinner = $('#dinnerInput').val();
+
+        var row = $('<tr>');
+        row.append($('<td>').text(date));
+        row.append($('<td>').text(breakfast));
+        row.append($('<td>').text(lunch));
+        row.append($('<td>').text(dinner));
+
+        $('#mealTable tbody').append(row);
+
+        $('#dateInput').val('');
+        $('#breakfastInput').val('');
+        $('#lunchInput').val('');
+        $('#dinnerInput').val('');
+      });
+    });
+    </script>
+              
+        </div>
+    </div>
+    <div class="gotohaksik">
+        <a href="https://www.kopo.ac.kr/jungsu/content.do?menu=247">식단정보 바로가기...</a>
+    </div>
+</body>
+</html>
